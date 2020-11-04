@@ -1,0 +1,12 @@
+version: "3"
+services:
+  server:
+    build: .
+    tty: true
+    container_name: http-server
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/project
+volumes:
+  project:
